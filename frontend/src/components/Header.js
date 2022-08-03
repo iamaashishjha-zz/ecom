@@ -27,10 +27,13 @@ function Header() {
                                     Home
                                 </Nav.Link>
                             </LinkContainer>
-                            <Nav.Link to="/about-us">
+                            <LinkContainer to="/cart">
+                                <Nav.Link>
                                 <i className="fa-solid fa-hands-bound mx-2"></i>
-                                About Us
+                                Cart
                             </Nav.Link>
+                            </LinkContainer>
+                            
                             <NavDropdown title="Authentication" id="navbarScrollingDropdown">
                                 <NavDropdown.Item to="#action3">
                                     <i className="fa-solid fa-house-lock mx-2"></i>
