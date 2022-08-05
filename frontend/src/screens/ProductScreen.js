@@ -79,11 +79,11 @@ function ProductScreen() {
                   <Row>
                     <Col>Status:</Col>
                     <Col>
-                      {product.coutInStock > 0 ? "In Stock" : "Out of Stock"}
+                      {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
                     </Col>
                   </Row>
                 </ListGroup.Item>
-                {product.coutInStock > 0 && (
+                {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <Row>
                       <Col>Qty</Col>
@@ -93,7 +93,7 @@ function ProductScreen() {
                           value={qty}
                           onChange={(e) => setQty(e.target.value)}
                         >
-                          {[...Array(product.coutInStock).keys()].map((x) => (
+                          {[...Array(product.countInStock).keys()].map((x) => (
                             <option key={x + 1} value={x + 1}>
                               {x + 1}
                             </option>
@@ -108,7 +108,7 @@ function ProductScreen() {
                     onClick={addToCartHandler}
                     className="btn btn-block"
                     type="button"
-                    disabled={product.coutInStock == 0}
+                    disabled={product.countInStock == 0}
                   >
                     <i className="fas fa-shopping-cart mx-2"></i>
                     Add to Cart
